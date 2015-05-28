@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Responsive Header DEMO</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="https://eafdbc63c97ce6bec9ef-b0a668e5876bef6fe25684caf71db405.ssl.cf1.rackcdn.com/v1-latest/canon.min.css">
+    <link rel="stylesheet" href="/bower_components/canon-bootstrap/build/css/canon-bootstrap.min.css">
+    <link href="https://19c5b85ac8f15b5aa0f0-992405e4638ce3c6772d7b96e627ce61.ssl.cf1.rackcdn.com/assets/dist/c5688d03a57579a3a0d34941f69d28b483c85b00/pilot.min.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://e254820983b0c4c21583-fb16d270e846c58de9c435311b7cb0f4.ssl.cf2.rackcdn.com/drawer/v1.7.8/css/drawer.css">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <div id="pilot-root">
+      <div class="navbar navbar-utility navbar-inverse hidden-xs">
+        <div class="container">
+          <ul id="pilot-control-panel-menu" class="nav navbar-nav navbar-left">
+            <li id="control-panel-dropdown" class="dropdown">
+              <a id="panel-label" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href>
+                Cloud Control Panel <i class="fa fa-angle-down"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-inverse" role="menu" aria-labelledby="panel-label">
+                <li role="presentation" class="dropdown-header">
+                  Dedicated Hosting
+                </li>
+                <li>
+                  <a href="https://my.rackspace.com">MyRackspace Portal</a>
+                </li>
+                <li class="divider"></li>
+                <li role="presentation" class="dropdown-header">
+                  Cloud Hosting
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com">Cloud Control Panel</a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/ck/sso/sites/?redirect=/Home.do">Cloud Sites</a>
+                </li>
+                <li class="divider"></li>
+                <li role="presentation" class="dropdown-header">
+                  Developer Tools
+                </li>
+                <li>
+                  <a href="https://intelligence.rackspace.com">Rackspace Intelligence</a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/ck/sso/mailgun">Mailgun</a>
+                </li>
+                <li>
+                  <a href="https://airbrake.io/account/new">Airbrake</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="https://mycloud.rackspace.com/feedback" data-pilot-tracking-id="feedback-link">Feedback</a>
+            </li>
+            <li>
+              <a href data-support-drawer-trigger="data-support-drawer-trigger" data-pilot-tracking-id="support-drawer">
+                <i class="fa fa-life-ring"></i> Support
+              </a>
+            </li>
+            <li id="user-menu" class="dropdown">
+              <a id="user-label" class="dropdown-toggle" href data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Account: racker <i class="fa fa-angle-down"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-inverse" role="menu" aria-labelledby="user-label">
+                <li>
+                  <a href>
+                    Account # 123456
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/account#billing"
+                    data-pilot-tracking-id="billing">
+                    Billing and Payments
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/account#usage"
+                    data-pilot-tracking-id="usage">
+                    Usage Overview
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/account#settings"
+                    data-pilot-tracking-id="account-settings">
+                    Account Settings
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/account#users"
+                    data-pilot-tracking-id="user-management">
+                    User Management
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/account#resource-limits"
+                    data-pilot-tracking-id="resource-limits">
+                    Resource Limits
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/tickets"
+                    data-pilot-tracking-id="support-tickets">
+                    Support Tickets
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/account#service-level"
+                    data-pilot-tracking-id="upgrade-service-level">
+                    Upgrade Service Level
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/logout?logout_success=true"
+                    data-pilot-tracking-id="logout">
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar navbar-primary hidden-xs">
+        <div class="container">
+          <a href="https://mycloud.rackspace.com/home"
+            class="navbar-brand navbar-left img__rackspace-logo"></a>
+          <ul class="nav navbar-nav">
+            <li id="pilot-servers">
+              <a class="js__popover-toggle u__pointer"
+                data-popover-id="pilot-servers-popover"
+                data-pilot-tracking-id="servers-dropdown" role="button"
+                tabindex="0">
+                Servers
+              </a>
+              <div id="pilot-servers-popover" class="rs-popover">
+                <div class="rs-popover-arrow rs-popover-arrow-top-left"></div>
+                <div class="rs-popover-content">
+                  <div class="pilot-nav-popover">
+                    <div class="pilot-nav-menu">
+                      <h4 class="rs-quiet pilot-menu-header">Cloud Servers</h4>
+                      <ul class="pilot-nav-menu-items">
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/servers"
+                            class="pilot-nav-menu-link"
+                            data-subnav="servers"
+                            data-pilot-tracking-id="servers">
+                            Cloud Servers
+                          </a>
+                        </li>
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/servers"
+                            class="pilot-nav-menu-link"
+                            data-subnav="servers"
+                            data-pilot-tracking-id="servers">
+                            Cloud Servers
+                          </a>
+                        </li>
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/servers#images"
+                            class="pilot-nav-menu-link"
+                            data-subnav="images"
+                            data-pilot-tracking-id="images">
+                            Saved Images
+                          </a>
+                        </li>
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/servers#auto-scale"
+                            class="pilot-nav-menu-link"
+                            data-subnav="auto-scale"
+                            data-pilot-tracking-id="auto-scale">
+                            Auto Scale
+                          </a>
+                        </li>
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/servers#ssh-keys"
+                            class="pilot-nav-menu-link"
+                            data-subnav="ssh-keys"
+                            data-pilot-tracking-id="ssh-keys">
+                            SSH Keys
+                          </a>
+                        </li>
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/queues"
+                            class="pilot-nav-menu-link"
+                            data-subnav="queues"
+                            data-pilot-tracking-id="queues">
+                            Message Queueing
+                          </a>
+                        </li>
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://intelligence.rackspace.com"
+                            class="pilot-nav-menu-link"
+                            data-subnav="cloud-intelligence"
+                            data-pilot-tracking-id="cloud-intelligence"
+                            target="_blank">
+                            Cloud Intelligence
+                            <i class="rs-icon-external pilot-img-external-link"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="pilot-task-menu">
+                      <h4 class="rs-quiet pilot-menu-header">
+                        Create Resources
+                      </h4>
+                      <ul class="pilot-nav-menu-items">
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/servers#new"
+                            class="pilot-nav-menu-link"
+                            data-subnav="server-create"
+                            data-pilot-tracking-id="server-create">
+                            Server...
+                          </a>
+                        </li>
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/load_balancers#new"
+                            class="pilot-nav-menu-link"
+                            data-subnav="server-dropdown-load-balancer-create"
+                            data-pilot-tracking-id="server-dropdown-load-balancer-create">
+                            Load Balancer...
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="pilot-networking">
+              <a class="js__popover-toggle u__pointer"
+                data-popover-id="pilot-networking-popover"
+                data-pilot-tracking-id="networking-dropdown"
+                role="button" tabindex="0">
+                Networking
+              </a>
+              <div id="pilot-networking-popover" class="rs-popover">
+                <div class="rs-popover-arrow rs-popover-arrow-top-left"></div>
+                <div class="rs-popover-content">
+                  <div class="pilot-nav-popover">
+                    <div class="pilot-nav-menu">
+                      <h4 class="rs-quiet pilot-menu-header">Networking</h4>
+                      <ul class="pilot-nav-menu-items">
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/load_balancers"
+                            class="pilot-nav-menu-link"
+                            data-subnav="load-balancers"
+                            data-pilot-tracking-id="load-balancers">
+                            Load Balancers
+                          </a>
+                        </li>
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/servers#networks"
+                            class="pilot-nav-menu-link"
+                            data-subnav="networking"
+                            data-pilot-tracking-id="networking">
+                            Networks
+                          </a>
+                        </li>
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/dns"
+                            class="pilot-nav-menu-link"
+                            data-subnav="cloud-dns"
+                            data-pilot-tracking-id="cloud-dns">
+                            Cloud DNS
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="pilot-task-menu">
+                      <h4 class="rs-quiet pilot-menu-header">
+                        Create Resources
+                      </h4>
+                      <ul class="pilot-nav-menu-items">
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/load_balancers#new"
+                            class="pilot-nav-menu-link"
+                            data-subnav="networking-dropdown-load-balancer-create"
+                            data-pilot-tracking-id="networking-dropdown-load-balancer-create">
+                            Load Balancer...
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="pilot-storage">
+              <a class="js__popover-toggle u__pointer"
+                data-popover-id="pilot-storage-popover"
+                data-pilot-tracking-id="storage-dropdown"
+                role="button" tabindex="0">
+                Storage
+              </a>
+              <div id="pilot-storage-popover" class="rs-popover">
+                <div class="rs-popover-arrow rs-popover-arrow-top-left"></div>
+                <div class="rs-popover-content">
+                  <div class="pilot-nav-popover">
+                    <div class="pilot-nav-menu">
+                      <h4 class="rs-quiet pilot-menu-header">Block Storage</h4>
+                      <ul class="pilot-nav-menu-items">
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/servers#volumes"
+                            class="pilot-nav-menu-link"
+                            data-subnav="volumes"
+                            data-pilot-tracking-id="volumes">
+                            Block Storage Volumes
+                          </a>
+                        </li>
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/servers#snapshots"
+                            class="pilot-nav-menu-link"
+                            data-subnav="snapshots"
+                            data-pilot-tracking-id="snapshots">
+                            Snapshots
+                          </a>
+                        </li>
+                      </ul>
+                      <h4 class="rs-quiet pilot-menu-header">Object Storage and CDN</h4>
+                      <ul class="pilot-nav-menu-items">
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/files"
+                            class="pilot-nav-menu-link"
+                            data-subnav="files"
+                            data-pilot-tracking-id="files">
+                            Files
+                          </a>
+                        </li>
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycdn.rackspace.com"
+                            class="pilot-nav-menu-link"
+                            data-subnav="cdn"
+                            data-pilot-tracking-id="cdn">
+                            CDN
+                            <i class="pilot-nav-new-pill pilot-img-new-pill"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="pilot-databases">
+              <a class="js__popover-toggle u__pointer"
+                data-popover-id="pilot-databases-popover"
+                data-pilot-tracking-id="database-dropdown"
+                role="button" tabindex="0">
+                Databases
+              </a>
+              <div id="pilot-databases-popover" class="rs-popover">
+                <div class="rs-popover-arrow rs-popover-arrow-top-left"></div>
+                <div class="rs-popover-content">
+                  <div class="pilot-nav-popover">
+                    <div class="pilot-nav-menu">
+                      <h4 class="rs-quiet pilot-menu-header">Databases</h4>
+                      <ul class="pilot-nav-menu-items">
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/database"
+                            class="pilot-nav-menu-link"
+                            data-subnav="database-instances"
+                            data-pilot-tracking-id="database-instances">
+                            MySQL
+                          </a>
+                        </li>
+                          <li class="pilot-nav-menu-item">
+                            <a href="https://mycloud.rackspace.com/sso/idp/objectrocket/?next=mongodb-instances"
+                              class="pilot-nav-menu-link"
+                              data-subnav="object-rocket-mongodb"
+                              data-pilot-tracking-id="object-rocket-mongodb"
+                              target="_blank">
+                              MongoDB
+                              <i class="rs-icon-external pilot-img-external-link"></i>
+                            </a>
+                          </li>
+                          <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/sso/idp/objectrocket/?next=redis-instances"
+                            class="pilot-nav-menu-link"
+                            data-subnav="object-rocket-redis"
+                            data-pilot-tracking-id="object-rocket-redis"
+                            target="_blank">
+                            Redis
+                            <i class="rs-icon-external pilot-img-external-link"></i>
+                          </a>
+                          <span class="pilot-caption">
+                            High-Performance by ObjectRocket
+                          </span>
+                        </li>
+                      </ul>
+                      <h4 class="rs-quiet pilot-menu-header">Data Processing</h4>
+                      <ul class="pilot-nav-menu-items">
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/servers#big-data"
+                            class="pilot-nav-menu-link"
+                            data-subnav="big-data"
+                            data-pilot-tracking-id="big-data">
+                            Big Data
+                          </a>
+                          <span class="pilot-caption">Powered by Apache<span class="super-script">&trade;</span> Hadoop<span class="super-script">&reg;</span></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="pilot-task-menu">
+                      <h4 class="rs-quiet pilot-menu-header">Create Resources</h4>
+                      <ul class="pilot-nav-menu-items">
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/database#create?dataStoreType=mysql"
+                            class="pilot-nav-menu-link"
+                            data-subnav="database-create"
+                            data-pilot-tracking-id="database-create">
+                            MySQL Instance...
+                          </a>
+                        </li>
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/servers#big-data/create"
+                            class="pilot-nav-menu-link"
+                            data-subnav="big-data-create"
+                            data-pilot-tracking-id="big-data-create">
+                            Hadoop Cluster...
+                          </a>
+                        </li>
+                      </ul>
+                      <h4 class="rs-quiet pilot-menu-header">Manage Extras</h4>
+                      <ul class="pilot-nav-menu-items">
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/database#backups"
+                            class="pilot-nav-menu-link"
+                            data-subnav="database-backups"
+                            data-pilot-tracking-id="database-backups">
+                            MySQL Backups
+                          </a>
+                        </li>
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/database#configurations"
+                            class="pilot-nav-menu-link"
+                            data-subnav="configurations"
+                            data-pilot-tracking-id="configurations">
+                            MySQL Configurations
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="pilot-orchestration">
+              <a class="js__popover-toggle u__pointer"
+                data-popover-id="pilot-orchestration-popover"
+                data-pilot-tracking-id="orchestration-dropdown"
+                role="button" tabindex="0">
+                Orchestration
+              </a>
+              <div id="pilot-orchestration-popover" class="rs-popover">
+                <div class="rs-popover-arrow rs-popover-arrow-top-left"></div>
+                <div class="rs-popover-content">
+                  <div class="pilot-nav-popover">
+                    <div class="pilot-nav-menu">
+                      <h4 class="rs-quiet pilot-menu-header">Orchestration</h4>
+                      <ul class="pilot-nav-menu-items">
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/servers#stacks"
+                            class="pilot-nav-menu-link"
+                            data-subnav="stacks"
+                            data-pilot-tracking-id="stacks">
+                            Stacks
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="pilot-task-menu">
+                      <h4 class="rs-quiet pilot-menu-header">Create Resources</h4>
+                      <ul class="pilot-nav-menu-items">
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/servers#stacks/create"
+                            class="pilot-nav-menu-link"
+                            data-subnav="create-stack"
+                            data-pilot-tracking-id="create-stack">
+                            Stack...
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="pilot-backups">
+              <a class="js__popover-toggle u__pointer"
+                data-popover-id="pilot-backups-popover"
+                data-pilot-tracking-id="backups-dropdown"
+                role="button" tabindex="0">
+                Backups
+              </a>
+              <div id="pilot-backups-popover" class="rs-popover">
+                <div class="rs-popover-arrow rs-popover-arrow-top-left"></div>
+                <div class="rs-popover-content">
+                  <div class="pilot-nav-popover">
+                    <div class="pilot-nav-menu">
+                      <h4 class="rs-quiet pilot-menu-header">Cloud Server Backups</h4>
+                      <ul class="pilot-nav-menu-items">
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/ck/sso/backup?redirect=/"
+                            class="pilot-nav-menu-link"
+                            data-subnav="systems"
+                            data-pilot-tracking-id="systems">
+                            Systems
+                          </a>
+                        </li>
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/ck/sso/backup?redirect=/backups"
+                            class="pilot-nav-menu-link"
+                            data-subnav="backups"
+                            data-pilot-tracking-id="backups">
+                            Backups
+                          </a>
+                        </li>
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/ck/sso/backup?redirect=/activity"
+                            class="pilot-nav-menu-link"
+                            data-subnav="activity"
+                            data-pilot-tracking-id="activity">
+                            Activity
+                          </a>
+                        </li>
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/ck/sso/backup?redirect=/settings"
+                            class="pilot-nav-menu-link"
+                            data-subnav="preferences"
+                            data-pilot-tracking-id="preferences">
+                            Preferences
+                          </a>
+                        </li>
+                      </ul>
+                      <h4 class="rs-quiet pilot-menu-header">MySQL Backups</h4>
+                      <ul class="pilot-nav-menu-items">
+                        <li class="pilot-nav-menu-item">
+                          <a href="https://mycloud.rackspace.com/database#backups"
+                            class="pilot-nav-menu-link"
+                            data-subnav="backup-database-backups"
+                            data-pilot-tracking-id="backup-database-backups">
+                            MySQL Backups
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar navbar-primary visible-xs u__squeeze-bottom">
+      <div class="container u__position-scope">
+        <div class="navbar-header u__position-scope">
+          <div class="pull-left mobile__collapse-btn-wrapper">
+            <button class="btn btn-default js__collapse-toggle"
+              data-target="mbl-primary-navigation">
+              <span class="sr-only">Toggle primary navigation</span>
+              <i class="fa fa-bars fa-2x"></i>
+            </button>
+          </div>
+
+          <a href="https://mycloud.rackspace.com/home"
+            class="nav-brand img__rackspace-logo img__rackspace-logo--center">
+          </a>
+
+          <div class="pull-right mobile__collapse-btn-wrapper">
+            <button class="btn btn-default js__collapse-toggle"
+              data-target="mbl-utility-navigation">
+              <span class="sr-only">Toggle utility navigation</span>
+              <i class="fa fa-caret-square-o-down fa-2x"></i>
+            </button>
+          </div>
+        </div>
+        <div id="mbl-primary-navigation"
+          class="navbar-collapse js__collapse collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <a id="mbl-servers" class="dropdown-toggle"
+                data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" href>
+                Servers <i class="fa fa-angle-down"></i>
+              </a>
+              <ul class="dropdown-menu" role="menu"
+                aria-labelledby="mbl-servers">
+                <li>
+                  <a href="https://mycloud.rackspace.com/servers">
+                    Cloud Servers
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/servers#images">
+                    Saved Images
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/servers#auto-scale">
+                    Auto Scale
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/servers#ssh-keys">
+                    SSH Keys
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/queues">
+                    Message Queueing
+                  </a>
+                </li>
+                <li>
+                  <a href="https://intelligence.rackspace.com"
+                    target="_blank">
+                    Cloud Intelligence
+                    <i class="rs-icon-external pilot-img-external-link"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a id="mbl-networking" class="dropdown-toggle"
+                data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" href>
+                Networking <i class="fa fa-angle-down"></i>
+              </a>
+              <ul class="dropdown-menu" role="menu"
+                aria-labelledby="mbl-networking">
+                <li>
+                  <a href="https://mycloud.rackspace.com/load_balancers">
+                    Load Balancers
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/servers#networks">
+                    Networks
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/dns">
+                    Cloud DNS
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a id="mbl-storage" class="dropdown-toggle"
+                data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" href>
+                Storage <i class="fa fa-angle-down"></i>
+              </a>
+              <ul class="dropdown-menu" role="menu"
+                aria-labelledby="mbl-storage">
+                <li>
+                  <a href="https://mycloud.rackspace.com/servers#volumes">
+                    Block Storage Volumes
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/servers#snapshots">
+                    Snapshots
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/files">
+                    Files
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycdn.rackspace.com">
+                    CDN
+                    <i class="pilot-nav-new-pill pilot-img-new-pill"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a id="mbl-databases" class="dropdown-toggle"
+                data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" href>
+                Databases <i class="fa fa-angle-down"></i>
+              </a>
+              <ul class="dropdown-menu" role="menu"
+                aria-labelledby="mbl-databases">
+                <li>
+                  <a href="https://mycloud.rackspace.com/database">
+                    MySQL
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/sso/idp/objectrocket/?next=mongodb-instances"
+                    target="_blank">
+                    MongoDB
+                    <i class="rs-icon-external pilot-img-external-link"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/sso/idp/objectrocket/?next=redis-instances"
+                    target="_blank">
+                    Redis
+                    <i class="rs-icon-external pilot-img-external-link"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/servers#big-data">
+                    Big Data
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a id="mbl-orchestration" class="dropdown-toggle"
+                data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" href>
+                Orchestration <i class="fa fa-angle-down"></i>
+              </a>
+              <ul class="dropdown-menu" role="menu"
+                aria-labelledby="mbl-orchestration">
+                <li>
+                  <a href="https://mycloud.rackspace.com/servers#stacks">
+                    Stacks
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a id="mbl-backups" class="dropdown-toggle"
+                data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" href>
+                Backups <i class="fa fa-angle-down"></i>
+              </a>
+              <ul class="dropdown-menu" role="menu"
+                aria-labelledby="mbl-backups">
+                <li>
+                  <a href="https://mycloud.rackspace.com/ck/sso/backup?redirect=/">
+                    Systems
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/ck/sso/backup?redirect=/backups">
+                    Backups
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/ck/sso/backup?redirect=/activity">
+                    Activity
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/ck/sso/backup?redirect=/settings">
+                    Preferences
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/database#backups">
+                    MySQL Backups
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="visible-xs">
+    <div id="mbl-utility-navigation" class="js__collapse collapse">
+      <div class="navbar navbar-inverse navbar-utility u__squeeze-bottom">
+        <div class="container">
+          <ul class="nav navbar-nav">
+            <li>
+              <a id="mbl-panel-label" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href>
+                Cloud Control Panel <i class="fa fa-angle-down"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-inverse" role="menu" aria-labelledby="mbl-panel-label">
+                <li role="presentation" class="dropdown-header">
+                  Dedicated Hosting
+                </li>
+                <li>
+                  <a href="https://my.rackspace.com">MyRackspace Portal</a>
+                </li>
+                <li class="divider"></li>
+                <li role="presentation" class="dropdown-header">
+                  Cloud Hosting
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com">Cloud Control Panel</a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/ck/sso/sites/?redirect=/Home.do">Cloud Sites</a>
+                </li>
+                <li class="divider"></li>
+                <li role="presentation" class="dropdown-header">
+                  Developer Tools
+                </li>
+                <li>
+                  <a href="https://intelligence.rackspace.com">Rackspace Intelligence</a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/ck/sso/mailgun">Mailgun</a>
+                </li>
+                <li>
+                  <a href="https://airbrake.io/account/new">Airbrake</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="https://mycloud.rackspace.com/feedback" data-pilot-tracking-id="feedback-link">Feedback</a>
+            </li>
+            <li>
+              <a id="mbl-user-label" class="dropdown-toggle" href data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Account: racker <i class="fa fa-angle-down"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-inverse" role="menu" aria-labelledby="mbl-user-label">
+                <li>
+                  <a href>
+                    Account # 123456
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/account#billing"
+                    data-pilot-tracking-id="billing">
+                    Billing and Payments
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/account#usage"
+                    data-pilot-tracking-id="usage">
+                    Usage Overview
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/account#settings"
+                    data-pilot-tracking-id="account-settings">
+                    Account Settings
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/account#users"
+                    data-pilot-tracking-id="user-management">
+                    User Management
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/account#resource-limits"
+                    data-pilot-tracking-id="resource-limits">
+                    Resource Limits
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/tickets"
+                    data-pilot-tracking-id="support-tickets">
+                    Support Tickets
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/account#service-level"
+                    data-pilot-tracking-id="upgrade-service-level">
+                    Upgrade Service Level
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="https://mycloud.rackspace.com/logout?logout_success=true"
+                    data-pilot-tracking-id="logout">
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="rs-main rs-panel panel">
+            <section class="section">
+              <h1 class="section__heading">Lorem Ipsum</h1>
+              <p>
+                Tattooed Pinterest irony seitan, VHS street art letterpress banh mi. 90's Helvetica keytar, occupy quinoa taxidermy kitsch lomo McSweeney's Austin tattooed photo booth. Etsy XOXO farm-to-table, plaid stumptown gluten-free 3 wolf moon tofu PBR single-origin coffee wolf. Cliche tote bag cronut health goth letterpress, ennui gentrify shabby chic chia Schlitz raw denim art party lomo photo booth PBR. Scenester meh direct trade Blue Bottle. Put a bird on it Odd Future keffiyeh Carles organic artisan. Odd Future hoodie dreamcatcher post-ironic, Etsy semiotics bespoke roof party Portland wolf paleo crucifix artisan.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://eafdbc63c97ce6bec9ef-b0a668e5876bef6fe25684caf71db405.ssl.cf1.rackcdn.com/v1-latest/canon.min.js"></script>
+    <script type="text/javascript" src="/bundle.js"></script>
+    <script onload="initializeDrawer({'username': 'kensheedlo', 'supportAccount': {'service_type': 'sysops', 'service_level': 'infrastructure', 'id': '921648', 'account_plan_request': null}, 'ddi': '921648', 'communityLink': 'https://community.rackspace.com', 'ticketLink': 'https://mycloud.rackspace.com/tickets', 'support_service_response': {'phone_teams': [{'phone_numbers': [{'phone_number': '1800-519-325', 'flag': 'au-flag', 'country_code': '+61'}, {'phone_number': '877-934-0407', 'flag': 'us-flag', 'country_code': '+1'}, {'phone_number': '0800-8899-0022', 'flag': 'nl-flag', 'country_code': '+31'}, {'phone_number': '0800-519-325', 'flag': 'nz-flag', 'country_code': '+64'}, {'phone_number': '0800-083-3012', 'flag': 'uk-flag', 'country_code': '+44'}, {'phone_number': '852-800-900331', 'flag': 'hk-flag', 'country_code': '+852'}], 'team': {'tags': ['cloud_us', 'team_d4-r'], 'flags': ['primary'], 'number': '2961', 'name': 'Team D4-R', 'id': '2961'}, 'id': '1', 'name': 'US_UNMANAGED_SUPPORT'}], 'chat_teams': [], 'teams': [{'tags': ['cloud_us', 'support-drawer', 'team_d4'], 'flags': null, 'number': '553', 'name': 'Team D4', 'id': '553'}, {'tags': ['cloud_us', 'team_d4-r'], 'flags': ['primary'], 'number': '2961', 'name': 'Team D4-R', 'id': '2961'}]}, 'liveChatLink': '', 'authToken': '083cb76b5eba45f7b5280ec54659ac47', 'urgentPhoneNumber': '800-480-2710', 'supportDrawerTrigger': '[data-support-drawer-trigger]'})" src="https://e254820983b0c4c21583-fb16d270e846c58de9c435311b7cb0f4.ssl.cf2.rackcdn.com/drawer/js/drawer.min.js" type="application/javascript" async="true">
+    </script>
+  </body>
+</html>
